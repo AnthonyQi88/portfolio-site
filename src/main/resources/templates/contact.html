@@ -3,14 +3,28 @@
 <head>
     <title>Portfolio - Contact</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
+
 <body>
-<h1>Contact Me</h1>
-<nav>
-    <a href="/">Home</a>
-    <a href="/projects">Projects</a>
-    <a href="/contact">Contact</a>
+
+
+<nav class="navbar navbar-expand-lg fancy-navbar">
+    <div class="container">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <a href="/">Home</a>
+                <a href="/aboutMe">About AnthonyQ</a>
+                <a href="/contact">Contact</a>
+                <a class="nav-link twitter-link" href="https://twitter.com/" target="_blank">
+                    <i class="fab fa-twitter"></i> Twitter
+                </a>
+            </ul>
+        </div>
+    </div>
 </nav>
+
 <form action="/contact" method="post">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required><br>

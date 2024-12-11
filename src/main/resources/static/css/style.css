@@ -1,11 +1,71 @@
+
 body {
-    font-family: Arial, sans-serif;
+    background: url('/images/myojindai.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #f1baf5;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     margin: 0;
-    padding: 0;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #00FFFF
+}
+
+/* Fancy Styling for H1 */
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 68px;
+    font-weight: bold;
+    text-align: center;
+    color: #b6f0f0;
+    margin-top: 80px;
+    margin-bottom: 20px;
+
+    /* Animation */
+    animation: gradient-move 3s infinite;
+}
+
+/* Keyframes for gradient animation */
+@keyframes gradient-move {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Center-align the <h1> block for the page */
+h1.center-align, h2.center-align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Optional: Adjust based on layout */
+}
+
+
+
+
+
+a {
+    color: #1DA1F2; /* Twitter's official blue */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 nav {
-    background-color: #333;
+    background-color: #FFF0F5;
     color: white;
     padding: 10px;
     text-align: center;
@@ -15,4 +75,137 @@ nav a {
     color: white;
     margin: 0 10px;
     text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+
+
+/* Fancy Navigation Bar */
+.fancy-navbar {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    padding: 10px 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.fancy-navbar .navbar-brand {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.fancy-navbar .navbar-nav .nav-link {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    margin-right: 15px;
+    transition: color 0.3s ease, transform 0.2s;
+}
+
+.fancy-navbar .navbar-nav .nav-link:hover {
+    color: #ffdf00;
+    transform: scale(1.1);
+}
+
+.fancy-navbar .navbar-toggler {
+    border: none;
+    background-color: #ffffff;
+}
+
+.fancy-navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.7%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Highlight Active Section */
+.fancy-navbar .nav-item .nav-link.active {
+    border-bottom: 2px solid #ffdf00;
+    color: #ffdf00 !important;
+}
+
+/* Twitter Icon Styling */
+.twitter-link i {
+    margin-right: 5px;
+    color: #1DA1F2;
+}
+
+.twitter-link:hover i {
+    color: #ffffff;
+}
+
+.fancy-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.fancy-navbar.shrink {
+    padding: 5px 20px;
+    background: linear-gradient(45deg, #2575fc, #6a11cb);
+}
+
+/* MAIN CONTENT */
+main {
+    flex: 1; /* Push footer to the bottom */
+    padding: 20px; /* Add spacing for content */
+}
+
+
+/* FOOTER */
+.footer {
+    background-color: #333; /* Dark background */
+    color: white; /* White text */
+    text-align: center;
+    padding: 10px 0; /* Add vertical spacing */
+    position: sticky;
+    left: 0; /* Align to the left */
+    bottom: 0; /* Align to the bottom */
+    width: 100%; /* Make it span the full width */
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add shadow above */
+}
+
+
+/* BUTTONS */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6a11cb; /* Matching gradient color */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #2575fc; /* Change color on hover */
+}
+
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.toggle-btn:hover {
+    background-color: #2575fc;
 }
